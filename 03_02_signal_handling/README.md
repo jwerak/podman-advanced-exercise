@@ -35,6 +35,8 @@ export CMD=signal; podman build --file Dockerfile-shell-go --build-arg CMD -t si
 podman run -d signal-handling:shell-${CMD}
 ```
 
+Fix the Dockerfile if the signals is still ignored.
+
 ## Exercise 3
 
 Operations version of Ex2
