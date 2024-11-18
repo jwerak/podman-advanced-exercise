@@ -2,7 +2,7 @@
 
 Create Dockerfiles for these variations and check how command is executed in container.
 
-Use container `docker.io/library/httpd` as base.
+Use container `quay.io/jwerak/pinger-base:latest` as base.
 
 ## Plain string
 
