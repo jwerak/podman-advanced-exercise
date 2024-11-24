@@ -5,3 +5,6 @@
   * [03_01 - Dockerfile - CMD vs ENTRYPOINT](03_01_dockerfile.md)
   * [03_02 - Dockerfile - OS Signal handling](03_02_signal_handling/README.md)
   * [04 - Podman Pod](04_podman_pod/README.md)
+  * [05 - Multi-stage build](./05_multistage_build/README.md)
+  * [06 - Image scanning](./06_prod_images/README.md)
+  * [07 - Container registry](./07_container_registry/README.md)
