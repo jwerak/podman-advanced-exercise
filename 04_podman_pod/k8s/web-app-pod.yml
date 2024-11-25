@@ -10,14 +10,14 @@ spec:
     - redis-server
     image: docker.io/library/redis:2.8
     name: redis-container
-    ports:
-    - containerPort: 5000
-      hostPort: 5000
     volumeMounts:
     - mountPath: /data
       name: webapp-redis-pvc
-  - image: localhost/flask-app:latest
+  - image: flask-app-api:latest
     name: flask-app
+    ports:
+    - containerPort: 5000
+      hostPort: 5000
   volumes:
   - name: webapp-redis-pvc
     persistentVolumeClaim:
