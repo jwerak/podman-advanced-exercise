@@ -2,13 +2,14 @@
 
 ## Prerequisites
 
-Configure your VM to have 2 cpus.
+Configure your VM to have at least 2 cpus.
 
 ## Test CGroups
 
 Notes:
 
-- Use top command[^2] to observe cpu loads,
+- Run commands as root
+- Use top command to observe cpu loads,
 - Use [stress image](https://github.com/progrium/docker-stress/blob/master/README.md) for this exercise.
 
 ### Test cases
@@ -22,7 +23,7 @@ Notes:
   - `podman run -it --rm docker.io/dockerskoleni/stress --cpu 2`
   - Modify CPUs that container can access directly in `/sys/fs/cgroup/`
 
-#### Sharing cpu resources between contianers
+#### Sharing cpu resources between containers
 
 - Run 2 containers, 1 with cpushare 1024, second with 2048
   - observe how much resources each container consumes
@@ -36,9 +37,6 @@ Notes:
 
 - Run container (from stress image) with memory limited to `128M`
 - Verify that container can't consume more memory than allocated
-
--------------------------------------------------------------------------------
-[^2]: set `TERM=xterm` to enable top in `boot2docker` image
 
 ## Notes
 
