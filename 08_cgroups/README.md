@@ -17,18 +17,18 @@ Notes:
 #### Assigning cpus to containers
 
 - Fully load single CPU core of your choice
-  - `podman run -it --rm docker.io/dockerskoleni/stress --cpu 1`
+  - `podman run -it --rm quay.io/jwerak/stress --cpu 1`
   - Verify that only one core is under load
 - Run container again but load both cpus
-  - `podman run -it --rm docker.io/dockerskoleni/stress --cpu 2`
+  - `podman run -it --rm quay.io/jwerak/stress --cpu 2`
   - Modify CPUs that container can access directly in `/sys/fs/cgroup/`
 
 #### Sharing cpu resources between containers
 
 - Run 2 containers, 1 with cpushare 1024, second with 2048
   - observe how much resources each container consumes
-  - `podman run -c 1024 -d docker.io/dockerskoleni/stress --cpu 2`
-  - `podman run -c 2048 -d docker.io/dockerskoleni/stress --cpu 2`
+  - `podman run -c 1024 -d quay.io/jwerak/stress --cpu 2`
+  - `podman run -c 2048 -d quay.io/jwerak/stress --cpu 2`
 - Ensure that container won't consume more CPU resources than specified no matter if its the only container on the host
   - See `cpushare` and `cpuquota`
 - Experiment with multiple containers
