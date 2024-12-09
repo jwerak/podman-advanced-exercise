@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: {}
+spec:
+  selector:
+    matchLabels:
+      app: hello-app
+  template:
+    metadata:
+      labels: {}
+    spec:
+      containers:
+        - name: <<NAME>>
+          image: ""
+          ports:
+            - containerPort: 8080
+          env:
+            - name: COLOR
+              value: "black"
