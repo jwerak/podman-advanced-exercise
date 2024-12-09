@@ -9,3 +9,8 @@
 - [06 - Image scanning](./06_prod_images/README.md)
 - [07 - Container registry](./07_container_registry/README.md)
 - [08 - CGroups](./08_cgroups.md)
+- [09 - Rootless Podman](./09_rootless/README.md)
+- [10 - Quadlet](./10_quadlet/README.md)
+- [11 - Kubernetes intro](./11_k8s_intro/README.md)
+- [12 - Kustomize](./12_kustomize/README.md)
+- [13 - OpenShift](./13_openshift/README.md)
