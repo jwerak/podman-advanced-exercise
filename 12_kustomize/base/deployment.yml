@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-app
+  template:
+    metadata:
+      labels:
+        app: hello-app
+    spec:
+      containers:
+      - name: hello-app
+        image: quay.io/jwerak/hello-app
+        ports:
+        - containerPort: 8080
+        env:
+        - name: COLOR
+          value: "black" # Default color is black

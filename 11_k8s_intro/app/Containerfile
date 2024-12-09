@@ -1,6 +1,8 @@
 FROM docker.io/library/python:3.11
 
 WORKDIR /app
+ENV COLOR=black \
+    ENVIRONMENT=development
 
 RUN pip install flask
 

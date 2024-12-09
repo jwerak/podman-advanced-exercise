@@ -6,6 +6,7 @@ app = Flask(__name__)
 
 # Get the environment variable for color; default to 'black'
 color = os.getenv("COLOR", "black")
+environment = os.getenv("ENVIRONMENT", "development")
 
 
 @app.route("/")
@@ -18,6 +19,7 @@ def hello():
         <head><title>Hello App</title></head>
         <body style="text-align: center; font-family: Arial, sans-serif;">
             <h1 style="color: {color};">Hello, my name is: {hostname}</h1>
+            <h2 style="color: {color};">Environment: <strong>{environment}</strong></h2>
         </body>
     </html>
     """
